@@ -11,18 +11,17 @@ test('calls onSubmit with the username and password when submitted', () => {
   const handleSubmit = jest.fn()
   // render the Login component to a div
   const div = document.createElement('div')
-  ReactDOM.render(<Login onSubmit={handleSubmit} />, div);
+  ReactDOM.render(<Login onSubmit={handleSubmit} />, div)
   // TIP: const div = document.createElement('div')
   //
   // get the field nodes
   // TIP: const inputs = div.querySelectorAll('input')
-  const inputs = div.querySelectorAll('input')
   // TIP: const form = div.querySelector('form')
   const form = div.querySelector('form')
-  const { username, password } = form.elements;
+  const {username, password} = form.elements
 
   // fill in the field values
-  username.value = 'chuck';
+  username.value = 'chuck'
   password.value = 'norris'
   //
   // Act
